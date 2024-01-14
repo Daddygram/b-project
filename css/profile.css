@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Variables */
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexAround {
+    display: flex;
+    justify-content: space-around;
+}
+.flexBetween {
+    display: flex;
+    justify-content: space-between;
+}
+.border {
+    border: 1px solid black;
+}
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.hidden {
+    display: none;
+}
+.pointer {
+    cursor: pointer;
+}
+
+/* Navbar */
+.logo {
+    width: 150px;
+    height: 100px;
+    align-items: center;
+}
+
+/* Hamburger */
+.hamburger {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+.burger {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    display: block;
+}
+
+.burger input {
+    display: none;
+}
+
+.burger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: black;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
+}
+
+/* Profile */
+.pfp-container {
+    margin-top: 50px;
+    width: 100%;
+    gap: 50px;
+}
+.pfp-details {
+    flex-direction: column;
+    text-align: center;
+}
+.circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.pfp {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.add-pfp {
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+.message-box {
+    width: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+.msg-num {
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 0;
+    background-color: grey;
+    color: red;
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+}
+.postEdits-container {
+    margin-top: 50px;
+    gap: 10px;
+}
+
+/* profile posts*/ 
+.profilePosts-container {
+    margin-top: 100px;
+    flex-direction: column;
+    gap: 40px;
+}
+.new-Post {
+    border-radius: 10px;
+    padding: 20px;
+}
+.new-Post:hover {
+    transition: 0.3s ease;
+    scale: 1.03;
+}
+.my-Post {
+    border-radius: 10px;
+    padding: 20px;
+}
+.my-Post:hover {
+    transition: 0.3s ease;
+    scale: 1.03;
+}
+.accept-Post {
+    border-radius: 10px;
+    padding: 20px;
+}
+.accept-Post:hover {
+    transition: 0.3s ease;
+    scale: 1.03;
+}
+.acceptPost-content{
+    gap: 10px;
+}
+.profileCircle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.acceptPost-text {
+    max-width: 500px;
+}
+.acceptPost-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.myPost:hover, .newPost:hover, .acceptPost:hover {
+    scale: 1.05;
+    transition: 0.3s ease;
+}
+.myPost.active, .newPost.active, .acceptPost.active {
+    color: blue;
+    font: bold;
+}
+.myPost-buttons {
+    width: 100px;
+    margin: auto;
+    margin-top: 30px;
+}
+.read-more-btn {
+    color: rgb(165, 165, 165);
+}
+.read-more-btn:hover {
+    color: rgb(66, 66, 66);
+}
+.acceptPost-buttons {
+    gap: 30px;
+}
+.trashIcon {
+    bottom: 10px;
+    right: 10px;
+}
+.delete-acceptPost {
+    font-size: 1.2rem;
+    color: blue;
+}
+.delete-acceptPost:hover {
+    color: red;
+}
+
+/* profile carousel */
+.profile-carousel {
+    margin-top: 100px;
+}
+.carousel-slide {
+    inset: 0;
+    display: none;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+}
+.carousel-slide[data-active] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    opacity: 1;
+}
+.profileCarousel-button{
+    z-index: 2;
+    background: none;
+    border: none;
+    top: 50%;
+    background-color: rgb(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255, 0.5);
+    border-radius: 50%;
+    font-size: 4rem;
+    padding: 0 0.5rem;
+    transform: translateY(-50%);
+}
+.profileCarousel-button:hover {
+    color: white;
+    background-color: black;
+    transition: 0.3s ease;
+}
+.profileCarousel-button:focus {
+    outline: 1px solid white;
+}
+.profileCarousel-button.prev {
+    left: 50px;
+}
+.profileCarousel-button.next {
+    right: 50px;
+}
+.carouselPost {
+    padding: 20px;
+    border-radius: 10px;
+}
+.carouselPost-pic {
+    width: 500px;
+    height: 350px;
+}
+
+/* footer */
+.profileFooter {
+    margin-top: 100px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: #E1E1EA;
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/profile.css">
+    <script src="/js/profile.js" defer></script>
+</head>
+<body>
+    <nav class="border">
+        <div class="flexBetween">
+            <div class="flexCenter">
+                <span class="logo flexCenter border">Logo</span>
+                <div>
+                    <p>menu .</p>
+                    <p>submenu</p>
+                </div>
+            </div>
+            <div class="hamburger">
+                <label class="burger" for="burger">
+                    <input type="checkbox" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="pfp-container flexCenter">
+            <div class="pfp-circle">
+                <div class="circle border relative flexCenter">
+                    <img src="" alt="pfp" class="pfp absolute">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 32 32" id="pfp-icon"><g fill="#828282">
+                        <path d="M1.5 32h29c.827 0 1.5-.673 1.5-1.5v-29c0-.827-.673-1.5-1.5-1.5h-29C.673 0 0 .673 0 1.5v29c0 .827.673 
+                        1.5 1.5 1.5zM1 1.5a.5.5 0 0 1 .5-.5h29a.5.5 0 0 1 .5.5v29a.5.5 0 0 1-.5.5h-29a.5.5 0 0 1-.5-.5v-29z"></path>
+                        <path d="M20.5 12.5c1.103 0 2-.897 2-2s-.897-2-2-2-2 .897-2 2 .897 2 2 2zm0-3a1.001 1.001 0 1 1-1 1c0-.551.448-1 1-1z"></path>
+                        <path d="M4.5 25h23a.5.5 0 0 0 .5-.5v-20a.5.5 0 0 0-.5-.5h-23a.5.5 0 0 0-.5.5v20a.5.5 0 0 0 
+                        .5.5zm.5-1v-5.638c.022-.016.047-.025.067-.045l5.116-5.116a.704.704 0 0 1 .972 0l7.521 7.521a.498.498 0 0 0 .699.008l3.866-3.672a.684.684 
+                        0 0 1 .957-.015L27 20.095l.001.001V24H5zM27 5v13.618l-2.081-2.266a1.67 1.67 0 0 0-1.191-.495h-.001a1.67 1.67 0 0 
+                        0-1.185.486l-3.504 3.328-7.176-7.177c-.639-.638-1.749-.637-2.386 0L5 16.971V5h22z"></path></g></svg>
+                    <label for="input-pfp">
+                        <div class="add-pfp absolute">
+                            <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M13 5H9.32843C8.79799 5 
+                                    8.28929 5.21071 7.91421 5.58579L7.08579 6.41421C6.71071 6.78929 6.20201 7 5.67157 7H4C2.89543 7 2 7.89543 2 9L2 19C2 20.1046 2.89543 21 4 
+                                    21H18C19.1046 21 20 20.1046 20 19V12M17 5H23M20 8V2M11 18C13.2091 18 15 16.2091 15 14C15 11.7909 13.2091 10 11 10C8.79086 10 7 11.7909 7 
+                                    14C7 16.2091 8.79086 18 11 18Z" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </div>
+                    </label>
+                    <input type="file" class="hidden" id="input-pfp">
+                </div>
+            </div>
+            <div class="pfp-details flexCenter">
+                <h2>Name Surname</h2>
+                <div class="message-box border relative flexCenter">
+                    <p>Message</p>
+                    <span class="absolute msg-num border flexCenter">3</span>
+                </div>
+                <div class="postEdits-container flexCenter">
+                    <div class="newPost flexCenter pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" viewBox="0 0 24 24" id="edit">
+                            <path fill="#000" fill-rule="evenodd" d="M4 4.75C3.30964 4.75 2.75 5.30964 2.75 6V20C2.75 20.6904 3.30964 21.25 4 
+                            21.25H6.5C6.91421 21.25 7.25 21.5858 7.25 22C7.25 22.4142 6.91421 22.75 6.5 22.75H4C2.48122 22.75 1.25 21.5188 1.25 20V6C1.25 
+                            4.48122 2.48122 3.25 4 3.25H14.5C14.9142 3.25 15.25 3.58579 15.25 4C15.25 4.41421 14.9142 4.75 14.5 4.75H4ZM20 8.75C20.4142 8.75 
+                            20.75 9.08579 20.75 9.5V20C20.75 21.5188 19.5188 22.75 18 22.75H10.5C10.0858 22.75 9.75 22.4142 9.75 22C9.75 21.5858 10.0858 21.25 
+                            10.5 21.25H18C18.6904 21.25 19.25 20.6904 19.25 20V9.5C19.25 9.08579 19.5858 8.75 20 8.75Z" clip-rule="evenodd"></path>
+                            <path fill="#000" fill-rule="evenodd" d="M19.4697 1.46967C19.7626 1.17678 20.2375 1.17678 20.5303 1.46967L22.5303 3.46967C22.8232 
+                            3.76256 22.8232 4.23744 22.5303 4.53033L14.5304 12.5303C14.448 12.6127 14.3476 12.6747 14.2372 12.7115L11.2372 13.7115C10.9677 
+                            13.8013 10.6706 13.7312 10.4697 13.5303C10.2688 13.3295 10.1987 13.0323 10.2885 12.7628L11.2885 9.76283C11.3253 9.65237 
+                            11.3874 9.552 11.4697 9.46967L19.4697 1.46967ZM12.6555 10.4051L12.1859 11.8141L13.5949 11.3445L20.9394 4L20 3.06066L12.6555 
+                            10.4051Z" clip-rule="evenodd"></path></svg>
+                            <p>New Post</p>
+                    </div>
+                    <div class="myPost flexCenter pointer active" >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" viewBox="0 0 24 24" id="edit">
+                            <path fill="#000" fill-rule="evenodd" d="M4 4.75C3.30964 4.75 2.75 5.30964 2.75 6V20C2.75 20.6904 3.30964 21.25 4 
+                            21.25H6.5C6.91421 21.25 7.25 21.5858 7.25 22C7.25 22.4142 6.91421 22.75 6.5 22.75H4C2.48122 22.75 1.25 21.5188 1.25 20V6C1.25 
+                            4.48122 2.48122 3.25 4 3.25H14.5C14.9142 3.25 15.25 3.58579 15.25 4C15.25 4.41421 14.9142 4.75 14.5 4.75H4ZM20 8.75C20.4142 8.75 
+                            20.75 9.08579 20.75 9.5V20C20.75 21.5188 19.5188 22.75 18 22.75H10.5C10.0858 22.75 9.75 22.4142 9.75 22C9.75 21.5858 10.0858 21.25 
+                            10.5 21.25H18C18.6904 21.25 19.25 20.6904 19.25 20V9.5C19.25 9.08579 19.5858 8.75 20 8.75Z" clip-rule="evenodd"></path>
+                            <path fill="#000" fill-rule="evenodd" d="M19.4697 1.46967C19.7626 1.17678 20.2375 1.17678 20.5303 1.46967L22.5303 3.46967C22.8232 
+                            3.76256 22.8232 4.23744 22.5303 4.53033L14.5304 12.5303C14.448 12.6127 14.3476 12.6747 14.2372 12.7115L11.2372 13.7115C10.9677 
+                            13.8013 10.6706 13.7312 10.4697 13.5303C10.2688 13.3295 10.1987 13.0323 10.2885 12.7628L11.2885 9.76283C11.3253 9.65237 
+                            11.3874 9.552 11.4697 9.46967L19.4697 1.46967ZM12.6555 10.4051L12.1859 11.8141L13.5949 11.3445L20.9394 4L20 3.06066L12.6555 
+                            10.4051Z" clip-rule="evenodd"></path></svg>
+                            <p>My Post</p>
+                    </div>
+                    <div class="acceptPost flexCenter pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" viewBox="0 0 24 24" id="edit">
+                            <path fill="#000" fill-rule="evenodd" d="M4 4.75C3.30964 4.75 2.75 5.30964 2.75 6V20C2.75 20.6904 3.30964 21.25 4 
+                            21.25H6.5C6.91421 21.25 7.25 21.5858 7.25 22C7.25 22.4142 6.91421 22.75 6.5 22.75H4C2.48122 22.75 1.25 21.5188 1.25 20V6C1.25 
+                            4.48122 2.48122 3.25 4 3.25H14.5C14.9142 3.25 15.25 3.58579 15.25 4C15.25 4.41421 14.9142 4.75 14.5 4.75H4ZM20 8.75C20.4142 8.75 
+                            20.75 9.08579 20.75 9.5V20C20.75 21.5188 19.5188 22.75 18 22.75H10.5C10.0858 22.75 9.75 22.4142 9.75 22C9.75 21.5858 10.0858 21.25 
+                            10.5 21.25H18C18.6904 21.25 19.25 20.6904 19.25 20V9.5C19.25 9.08579 19.5858 8.75 20 8.75Z" clip-rule="evenodd"></path>
+                            <path fill="#000" fill-rule="evenodd" d="M19.4697 1.46967C19.7626 1.17678 20.2375 1.17678 20.5303 1.46967L22.5303 3.46967C22.8232 
+                            3.76256 22.8232 4.23744 22.5303 4.53033L14.5304 12.5303C14.448 12.6127 14.3476 12.6747 14.2372 12.7115L11.2372 13.7115C10.9677 
+                            13.8013 10.6706 13.7312 10.4697 13.5303C10.2688 13.3295 10.1987 13.0323 10.2885 12.7628L11.2885 9.76283C11.3253 9.65237 
+                            11.3874 9.552 11.4697 9.46967L19.4697 1.46967ZM12.6555 10.4051L12.1859 11.8141L13.5949 11.3445L20.9394 4L20 3.06066L12.6555 
+                            10.4051Z" clip-rule="evenodd"></path></svg>
+                            <p>Accept Post</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="profilePosts-container flexCenter">
+            
+        </div>
+        <div class="profile-carousel relative" data-carousel>
+            <button class="profileCarousel-button prev absolute" data-profileCarousel-buttons="prev">&xlarr;</button>
+            <button class="profileCarousel-button next absolute" data-profileCarousel-buttons="next">&xrarr;</button>
+            <ul data-slides>
+                <li class="carousel-slide " data-active>
+                    <div class="carouselPost border">
+                        <div class="carouselPost-pic flexCenter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 32 32" id="picture"><g fill="#828282">
+                                <path d="M1.5 32h29c.827 0 1.5-.673 1.5-1.5v-29c0-.827-.673-1.5-1.5-1.5h-29C.673 0 0 .673 0 1.5v29c0 .827.673 
+                                1.5 1.5 1.5zM1 1.5a.5.5 0 0 1 .5-.5h29a.5.5 0 0 1 .5.5v29a.5.5 0 0 1-.5.5h-29a.5.5 0 0 1-.5-.5v-29z"></path>
+                                <path d="M20.5 12.5c1.103 0 2-.897 2-2s-.897-2-2-2-2 .897-2 2 .897 2 2 2zm0-3a1.001 1.001 0 1 1-1 1c0-.551.448-1 1-1z"></path>
+                                <path d="M4.5 25h23a.5.5 0 0 0 .5-.5v-20a.5.5 0 0 0-.5-.5h-23a.5.5 0 0 0-.5.5v20a.5.5 0 0 0 
+                                .5.5zm.5-1v-5.638c.022-.016.047-.025.067-.045l5.116-5.116a.704.704 0 0 1 .972 0l7.521 7.521a.498.498 0 0 0 .699.008l3.866-3.672a.684.684 
+                                0 0 1 .957-.015L27 20.095l.001.001V24H5zM27 5v13.618l-2.081-2.266a1.67 1.67 0 0 0-1.191-.495h-.001a1.67 1.67 0 0 
+                                0-1.185.486l-3.504 3.328-7.176-7.177c-.639-.638-1.749-.637-2.386 0L5 16.971V5h22z"></path></g></svg>
+                        </div>
+                        <h3>post title</h3>
+                        <p>Location</p>
+                        <div class="review-price flexBetween">
+                            <p>(review 0.0)</p>
+                            <p>120$/day</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="carousel-slide ">
+                    <div class="carouselPost border">
+                        <div class="carouselPost-pic flexCenter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 32 32" id="picture"><g fill="#828282">
+                                <path d="M1.5 32h29c.827 0 1.5-.673 1.5-1.5v-29c0-.827-.673-1.5-1.5-1.5h-29C.673 0 0 .673 0 1.5v29c0 .827.673 
+                                1.5 1.5 1.5zM1 1.5a.5.5 0 0 1 .5-.5h29a.5.5 0 0 1 .5.5v29a.5.5 0 0 1-.5.5h-29a.5.5 0 0 1-.5-.5v-29z"></path>
+                                <path d="M20.5 12.5c1.103 0 2-.897 2-2s-.897-2-2-2-2 .897-2 2 .897 2 2 2zm0-3a1.001 1.001 0 1 1-1 1c0-.551.448-1 1-1z"></path>
+                                <path d="M4.5 25h23a.5.5 0 0 0 .5-.5v-20a.5.5 0 0 0-.5-.5h-23a.5.5 0 0 0-.5.5v20a.5.5 0 0 0 
+                                .5.5zm.5-1v-5.638c.022-.016.047-.025.067-.045l5.116-5.116a.704.704 0 0 1 .972 0l7.521 7.521a.498.498 0 0 0 .699.008l3.866-3.672a.684.684 
+                                0 0 1 .957-.015L27 20.095l.001.001V24H5zM27 5v13.618l-2.081-2.266a1.67 1.67 0 0 0-1.191-.495h-.001a1.67 1.67 0 0 
+                                0-1.185.486l-3.504 3.328-7.176-7.177c-.639-.638-1.749-.637-2.386 0L5 16.971V5h22z"></path></g></svg>
+                        </div>
+                        <h3>post title</h3>
+                        <p>Location</p>
+                        <div class="review-price flexBetween">
+                            <p>(review 0.0)</p>
+                            <p>500$/day</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="carousel-slide ">
+                    <div class="carouselPost border">
+                        <div class="carouselPost-pic flexCenter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 32 32" id="picture"><g fill="#828282">
+                                <path d="M1.5 32h29c.827 0 1.5-.673 1.5-1.5v-29c0-.827-.673-1.5-1.5-1.5h-29C.673 0 0 .673 0 1.5v29c0 .827.673 
+                                1.5 1.5 1.5zM1 1.5a.5.5 0 0 1 .5-.5h29a.5.5 0 0 1 .5.5v29a.5.5 0 0 1-.5.5h-29a.5.5 0 0 1-.5-.5v-29z"></path>
+                                <path d="M20.5 12.5c1.103 0 2-.897 2-2s-.897-2-2-2-2 .897-2 2 .897 2 2 2zm0-3a1.001 1.001 0 1 1-1 1c0-.551.448-1 1-1z"></path>
+                                <path d="M4.5 25h23a.5.5 0 0 0 .5-.5v-20a.5.5 0 0 0-.5-.5h-23a.5.5 0 0 0-.5.5v20a.5.5 0 0 0 
+                                .5.5zm.5-1v-5.638c.022-.016.047-.025.067-.045l5.116-5.116a.704.704 0 0 1 .972 0l7.521 7.521a.498.498 0 0 0 .699.008l3.866-3.672a.684.684 
+                                0 0 1 .957-.015L27 20.095l.001.001V24H5zM27 5v13.618l-2.081-2.266a1.67 1.67 0 0 0-1.191-.495h-.001a1.67 1.67 0 0 
+                                0-1.185.486l-3.504 3.328-7.176-7.177c-.639-.638-1.749-.637-2.386 0L5 16.971V5h22z"></path></g></svg>
+                        </div>
+                        <h3>post title</h3>
+                        <p>Location</p>
+                        <div class="review-price flexBetween">
+                            <p>(review 0.0)</p>
+                            <p>1000$/day</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer class="profileFooter flexCenter">
+        Footer
+    </footer>
+</body>
+</html>
