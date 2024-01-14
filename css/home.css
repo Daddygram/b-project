@@ -1,0 +1,234 @@
+
+*{
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+/*************************************************** slider **************************************************/
+.wave{
+    position: absolute;
+    bottom: 0;
+    z-index: 9999;
+}
+.slider-text{ 
+    position: absolute;
+    right: 15%;
+    top: 4rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #000000;
+    text-align: center;
+    z-index: 999999;
+}
+.search{
+    display: flex;
+    justify-content: center;
+}
+.search input{
+    width: 60%;
+}
+.search svg{
+    margin-left: -50px;
+    width: 30px;
+}
+
+/************************************************** card carusel ******************************************/
+.card-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.scroll-btn{
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    padding: 5px 13px;
+    margin: 5px;
+}
+.AllSlides{
+    display: flex;
+    overflow-y:hidden;
+    overflow-x:hidden;
+    scroll-snap-type: x mandatory;
+}
+.center{
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.card-body{
+    margin: 5px;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.682);
+    min-width: 393px;
+    scroll-snap-align: start;
+}
+.like{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.card-body img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+.card-details{
+    padding: 15px;
+}
+.card-details div{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*-----------------------------------------------*/
+
+.baner{
+    background-color: rgb(145, 112, 112);
+    width: 100%;
+    margin: 70px 0px;
+    height: 400px;
+}
+.footer{
+    background-color: rgb(76, 76, 76);
+    width: 100%;
+    margin-top: 70px;
+    height: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1400px) {
+    .slider-text {
+        position: absolute;
+        right: 15%;
+        top: 2rem;
+        left: 15%;
+        /* padding-top: 1.25rem; */
+        padding-bottom: 1.25rem;
+        color: #000000;
+        text-align: center;
+        z-index: 999999;
+    }
+    
+    
+}
+@media (max-width: 800px) {
+    .slider-text {
+        position: absolute;
+        right: 15%;
+        top: 0rem;
+        left: 15%;
+        /* padding-top: 1.25rem; */
+        padding-bottom: 1.25rem;
+        color: #000000;
+        text-align: center;
+        z-index: 999999;
+    }
+    
+    
+}
+@media (max-width: 600px) {
+    .slider-text {
+        position: absolute;
+        right: 15%;
+        top: 0rem;
+        left: 15%;
+        /* padding-top: 1.25rem; */
+        padding-bottom: 1.25rem;
+        color: #000000;
+        text-align: center;
+        z-index: 999999;
+    }
+    .card-body{
+        min-width: 100%;
+    }
+    
+    .slider-text h5{
+        font-size: 12PX;
+    }
+    .slider-text p{
+        font-size: 10px;
+    }
+    .search input{
+        height: 45PX;
+    }
+    .search svg {
+        margin-left: -35px;
+        margin-top: -6px;
+        width: 20px;
+    }
+}
+@media (max-width: 460px){
+  .search input {
+    height: 30px;
+    font-size: 10px;
+}
+.search svg {
+    margin-left: -35px;
+    margin-top: -8px;
+    width: 15px;
+}
+.slider-text h5{
+    font-size: 8PX;
+}
+.slider-text p{
+    font-size: 6px;
+}
+
+
+}
+@media (max-width: 280px) {
+    .search input {
+        height: 20px;
+        font-size: 8px;
+    }
+    .search svg {
+        margin-left: -20px;
+        margin-top: -15px;
+        width: 10px;
+    }
+    .slider-text p{
+        margin-bottom: 0px;
+    }
+}
