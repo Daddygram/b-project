@@ -38,18 +38,42 @@ body {
 .absolute {
     position: absolute;
 }
+.fixed {
+    position: fixed;
+}
 .hidden {
     display: none;
 }
 .pointer {
     cursor: pointer;
 }
+.w-full {
+    width: 100%;
+}
+
+/* layout */
+
+.layout {
+    max-width: 1400px;
+    margin: auto;
+}
 
 /* Navbar */
+.navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 2;
+}
 .logo {
     width: 150px;
     height: 100px;
     align-items: center;
+}
+.navMenu-items {
+    margin-left: 20px;
+    gap: 20px;
 }
 
 /* Hamburger */
@@ -57,6 +81,7 @@ body {
     display: flex;
     align-items: center;
     margin-right: 20px;
+    z-index: 2;
 }
 .burger {
     position: relative;
@@ -117,10 +142,35 @@ body {
     top: 28px;
     left: 5px;
 }
+/* hamburger sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    min-height: 100vh;
+    position: fixed;
+    top: 101px;
+    right: -110%;
+    z-index: 2;
+    background-color: white;
+    transition: 0.4s ease;
+}
+.sidebar.hamActive {
+    right: 0;
+}
+.hamburger-links {
+    width: 100%;
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+}
+.hamburger-links:hover {
+    color: #998181;
+}
 
 /* Profile */
 .pfp-container {
-    margin-top: 50px;
+    margin-top: 150px;
     width: 100%;
     gap: 50px;
 }
@@ -154,7 +204,7 @@ body {
     height: 30px;
     top: 0;
     right: 0;
-    background-color: grey;
+    background-color: lightgrey;
     color: red;
     border-radius: 50%;
     transform: translate(50%, -50%);
@@ -244,6 +294,103 @@ body {
     color: red;
 }
 
+/* add post */
+.newPost-container {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.newPost-content {
+    background-color: white;
+    padding: 20px 50px;
+    border-radius: 15px;
+}
+.newPost-form {
+    flex-direction: column;
+    gap: 20px;
+}
+.categories1 {
+    gap: 20px;
+}
+.categories2 {
+    gap: 20px;
+}
+.category-circle {
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+.category-text {
+    width: fit-content;
+    margin: auto;
+}
+.addPost-btn {
+    padding: 10px 30px;
+    background: none;
+    border-radius: 5px;
+    align-self: flex-end;
+}
+.dropdown {
+    padding: 10px 20px;
+}
+.select {
+    min-width: 80px;
+    gap: 10px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.caret {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid black;
+    transition: 0.3s;
+}
+.caret-rotate {
+    transform: rotate(180deg);
+}
+.dropdown-menu {
+    padding: 5px 10px;
+    background: white;
+    border-radius: 5px;
+    top: 3em;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    display: none;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 5;
+}
+.dropdown-menu-open {
+    display: block;
+    opacity: 1;
+}
+.addPost-textInput {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.addPost-textInput2 {
+    min-height: 200px;
+}
+.addPost-x {
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: grey;
+}
+.addPost-x:hover {
+    color: black;
+}
+
 /* profile carousel */
 .profile-carousel {
     margin-top: 100px;
@@ -262,7 +409,7 @@ body {
     opacity: 1;
 }
 .profileCarousel-button{
-    z-index: 2;
+    z-index: 1;
     background: none;
     border: none;
     top: 50%;
@@ -303,3 +450,33 @@ body {
     border-radius: 10px;
     background-color: #E1E1EA;
 }
+
+/* Responsiveness */
+@media screen and (max-width: 1024px) {
+    /* make navbar jump to bottom */
+    .navbar {
+        top: auto;
+        bottom: 0;
+    }
+    .pfp-container {
+        margin-top: 50px;
+    }
+    .sidebar {
+        top: auto;
+        bottom: 101px;
+        justify-content: flex-end;
+    }
+    .profileFooter {
+        margin-bottom: 100px;
+    }
+ }
+
+ @media screen and (max-width: 768px) {
+    /* profile picture fix */
+    .pfp-container {
+        flex-wrap: wrap;
+    }
+    .carouselPost {
+        max-width: 90%;
+    }
+ }

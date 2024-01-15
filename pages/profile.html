@@ -8,11 +8,17 @@
     <script src="/js/profile.js" defer></script>
 </head>
 <body>
-    <nav class="border">
+<div class="layout">
+
+    <!-- NAVBAR -->
+    <nav class="navbar border fixed">
         <div class="flexBetween">
             <div class="flexCenter">
                 <span class="logo flexCenter border">Logo</span>
-                <div>
+                <div class="flexCenter navMenu-items">
+                    <a href="/home.html">
+                        <svg width="52px" height="52px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3103 1.77586C11.6966 1.40805 12.3034 1.40805 12.6897 1.77586L20.6897 9.39491L23.1897 11.7759C23.5896 12.1567 23.605 12.7897 23.2241 13.1897C22.8433 13.5896 22.2103 13.605 21.8103 13.2241L21 12.4524V20C21 21.1046 20.1046 22 19 22H14H10H5C3.89543 22 3 21.1046 3 20V12.4524L2.18966 13.2241C1.78972 13.605 1.15675 13.5896 0.775862 13.1897C0.394976 12.7897 0.410414 12.1567 0.810345 11.7759L3.31034 9.39491L11.3103 1.77586ZM5 10.5476V20H9V15C9 13.3431 10.3431 12 12 12C13.6569 12 15 13.3431 15 15V20H19V10.5476L12 3.88095L5 10.5476ZM13 20V15C13 14.4477 12.5523 14 12 14C11.4477 14 11 14.4477 11 15V20H13Z" fill="#000000"></path> </g></svg>
+                    </a>
                     <p>menu .</p>
                     <p>submenu</p>
                 </div>
@@ -24,9 +30,16 @@
                     <span></span>
                     <span></span>
                 </label>
+                <aside class="sidebar border">
+                    <a href="#profile" class="hamburger-links flexCenter regular14">Profile</a>
+                    <a href="#posts" class="hamburger-links flexCenter regular14">Posts</a>
+                    <a href="#info" class="hamburger-links flexCenter regular14">Info</a>
+                </aside>
             </div>
         </div>
     </nav>
+
+    <!-- PROFILE -->
     <header>
         <div class="pfp-container flexCenter">
             <div class="pfp-circle">
@@ -56,7 +69,7 @@
                 <h2>Name Surname</h2>
                 <div class="message-box border relative flexCenter">
                     <p>Message</p>
-                    <span class="absolute msg-num border flexCenter">3</span>
+                    <span class="absolute msg-num border flexCenter">0</span>
                 </div>
                 <div class="postEdits-container flexCenter">
                     <div class="newPost flexCenter pointer">
@@ -105,10 +118,14 @@
             </div>
         </div>
     </header>
+
+    <!-- PROFILE POSTS (mainly javascript) -->
     <main>
         <div class="profilePosts-container flexCenter">
             
         </div>
+
+    <!-- PROFILE CAROUSEL -->
         <div class="profile-carousel relative" data-carousel>
             <button class="profileCarousel-button prev absolute" data-profileCarousel-buttons="prev">&xlarr;</button>
             <button class="profileCarousel-button next absolute" data-profileCarousel-buttons="next">&xrarr;</button>
@@ -176,8 +193,84 @@
             </ul>
         </div>
     </main>
+</div>
+
+    <!-- FOOTER -->
     <footer class="profileFooter flexCenter">
         Footer
     </footer>
+
+    <!-- NEW POST -->
+    <div class="newPost-container hidden fixed flexCenter">
+        <div class="newPost-content border relative">
+            <form action="#" name="newPost-form" class="newPost-form flexCenter">
+                <div class="flexCenter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" viewBox="0 0 24 24" id="edit">
+                        <path fill="#000" fill-rule="evenodd" d="M4 4.75C3.30964 4.75 2.75 5.30964 2.75 6V20C2.75 20.6904 3.30964 21.25 4 
+                        21.25H6.5C6.91421 21.25 7.25 21.5858 7.25 22C7.25 22.4142 6.91421 22.75 6.5 22.75H4C2.48122 22.75 1.25 21.5188 1.25 20V6C1.25 
+                        4.48122 2.48122 3.25 4 3.25H14.5C14.9142 3.25 15.25 3.58579 15.25 4C15.25 4.41421 14.9142 4.75 14.5 4.75H4ZM20 8.75C20.4142 8.75 
+                        20.75 9.08579 20.75 9.5V20C20.75 21.5188 19.5188 22.75 18 22.75H10.5C10.0858 22.75 9.75 22.4142 9.75 22C9.75 21.5858 10.0858 21.25 
+                        10.5 21.25H18C18.6904 21.25 19.25 20.6904 19.25 20V9.5C19.25 9.08579 19.5858 8.75 20 8.75Z" clip-rule="evenodd"></path>
+                        <path fill="#000" fill-rule="evenodd" d="M19.4697 1.46967C19.7626 1.17678 20.2375 1.17678 20.5303 1.46967L22.5303 3.46967C22.8232 
+                        3.76256 22.8232 4.23744 22.5303 4.53033L14.5304 12.5303C14.448 12.6127 14.3476 12.6747 14.2372 12.7115L11.2372 13.7115C10.9677 
+                        13.8013 10.6706 13.7312 10.4697 13.5303C10.2688 13.3295 10.1987 13.0323 10.2885 12.7628L11.2885 9.76283C11.3253 9.65237 
+                        11.3874 9.552 11.4697 9.46967L19.4697 1.46967ZM12.6555 10.4051L12.1859 11.8141L13.5949 11.3445L20.9394 4L20 3.06066L12.6555 
+                        10.4051Z" clip-rule="evenodd"></path></svg>
+                        <p>New Post</p>
+                </div>
+                <div>
+                    <h3 class="category-text">text</h3>
+                    <div class="categories1 flexCenter">
+                        <div class="category-circle"></div>
+                        <div class="category-circle"></div>
+                        <div class="category-circle"></div>
+                        <div class="category-circle"></div>
+                        <div class="category-circle"></div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="category-text">text</h3>
+                    <div class="categories2 flexCenter">
+                        <div class="category-circle"></div>
+                        <div class="category-circle"></div>
+                        <div class="category-circle"></div>
+                        <div class="category-circle"></div>
+                        <div class="category-circle"></div>
+                        <div class="category-circle"></div>
+                        <div class="category-circle"></div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="category-text">text</h3>
+                    <input type="date">
+                </div>
+                <div>
+                    <h3 class="category-text">text</h3>
+                    <div class="dropdown relative">
+                        <div class="select border flexCenter">
+                            <span class="selected">აირჩიე ერთი</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="dropdown-menu border absolute">
+                            <li class="dropdownActive">აირჩიე ერთი</li>
+                            <li>ბექა</li>
+                            <li>თორნიკე</li>
+                            <li>მარიამი</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="category-text">text</h3>
+                    <input type="text" placeholder="შეიყვანეთ ტექსტი" class="addPost-textInput">
+                </div>
+                <div class="w-full">
+                    <h3 class="category-text">text</h3>
+                    <input type="text" placeholder="შეიყვანეთ ტექსტი" class="addPost-textInput addPost-textInput2 w-full">
+                </div>
+                <button type="submit" class="addPost-btn border">Send</button>
+                <span class="absolute addPost-x">&#10005;</span>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

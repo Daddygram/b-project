@@ -1,3 +1,27 @@
+// hamburger menu comes to life
+const hamburger = document.querySelector("#burger")
+const sidebar = document.querySelector(".sidebar")
+const hamLinks = document.querySelectorAll(".hamburger-links")
+
+hamburger.addEventListener("click", ()=> {
+    sidebar.classList.toggle("hamActive")
+})
+hamLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        sidebar.classList.toggle("hamActive")
+    });
+});
+
+//sidebar height fix on mobile
+
+function setSidebarHeight() {
+    var viewportHeight = window.innerHeight
+    document.querySelector('.sidebar').style.height = viewportHeight + 'px'
+}
+
+document.addEventListener('DOMContentLoaded', setSidebarHeight)
+window.addEventListener('resize', setSidebarHeight)
+
 // profile page carousel
 const profileCarouselButtons = document.querySelectorAll("[data-profileCarousel-buttons]")
 
@@ -32,6 +56,7 @@ inputpfp.onchange = () => {
 
 // creating my posts and accept posts
 var postsContainer = document.querySelector(".profilePosts-container")
+let msgNum = document.querySelector(".msg-num")
 let myPostId = 1
 let acceptPostId = 1
 
@@ -54,11 +79,11 @@ function addMyPost() {
             </div>
             <div class="acceptPost-text">
                 <h5>Name surname</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, deserunt quo provident at sint dolor.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="read-more-text hidden"> Accusantium, deserunt quo provident at sint dolor. </span> </p>
             </div>
         </div>
         <div class="myPost-buttons">
-            <span>read more</span>
+            <span class="read-more-btn pointer">read more</span>
             <svg fill="#000000" class="trashIcon absolute pointer" width="34px" height="34px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0">
                 </g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M831.24 280.772c5.657 
                     0 10.24-4.583 10.24-10.24v-83.528c0-5.657-4.583-10.24-10.24-10.24H194.558a10.238 10.238 0 00-10.24 10.24v83.528c0 5.657 4.583 10.24 10.24 
@@ -75,6 +100,16 @@ function addMyPost() {
                     22.171-18.636l39.936-460.964c.976-11.269-7.367-21.195-18.636-22.171s-21.195 7.367-22.171 18.636z"></path></g></svg>
         </div>
     `
+
+    // adding read more
+
+    let readBtn = post.querySelector(".read-more-btn")
+    let readTxt = post.querySelector(".read-more-text")
+
+    readBtn.addEventListener("click", () => {
+        readTxt.classList.toggle("hidden")
+        readBtn.textContent = readBtn.textContent.includes("read more") ? "read less" : "read more";
+    })
 
     postsContainer.appendChild(post)
     myPostId++
@@ -118,7 +153,6 @@ function addAcceptPost() {
     `
 
     postsContainer.appendChild(post)
-    acceptPostId++
 
     var deleteIcon = post.querySelectorAll(".delete-acceptPost")
     deleteIcon.forEach(span => {
@@ -127,6 +161,7 @@ function addAcceptPost() {
             if (acceptPostId > 1) {
                 acceptPostId--
             }
+            msgNum.textContent = acceptPostId - 1
         })
     })
     
@@ -140,6 +175,11 @@ function addAcceptPost() {
     readBtn.textContent = readBtn.textContent.includes("read more") ? "read less" : "read more";
   })
 
+  // adding dynamic message number 
+  
+  msgNum.textContent = acceptPostId
+
+  acceptPostId++
 }
 
 function removePost(postId) {
@@ -152,6 +192,8 @@ function removePost(postId) {
 // adding two posts on page load
 for (var i = 0; i < 2; i++) {
     addMyPost()
+}
+for (var i = 0; i < 2; i++) {
     addAcceptPost()
 }
 
@@ -164,12 +206,63 @@ let myPosts = postsContainer.querySelectorAll(".my-Post")
 let acceptPosts = postsContainer.querySelectorAll(".accept-Post")
 
 myPostBtn.addEventListener("click", () => {
+    acceptPostBtn.classList.remove("active")
+    myPostBtn.classList.add("active")
     acceptPosts.forEach(post => post.classList.add("hidden"))
     myPosts.forEach(post => post.classList.remove("hidden"))
   })
   
   acceptPostBtn.addEventListener("click", () => {
+    myPostBtn.classList.remove("active")
+    acceptPostBtn.classList.add("active")
     myPosts.forEach(post => post.classList.add("hidden"))
     acceptPosts.forEach(post => post.classList.remove("hidden"))
   })
 
+  // new post 
+
+  const newPost = document.querySelector(".newPost-container")
+  const newPostBtn = document.querySelector(".newPost")
+  const closeNewPost = document.querySelector(".addPost-x")
+  const addPostBtn = document.querySelector(".addPost-btn")
+
+  newPostBtn.addEventListener('click', () => {
+    newPost.classList.remove("hidden")
+  })
+  closeNewPost.addEventListener('click', () => {
+    newPost.classList.add("hidden")
+  })
+  addPostBtn.addEventListener('click', () => {
+    newPost.classList.add("hidden")
+  })
+  
+
+
+  // dropdown menu 
+  const dropdowns = document.querySelectorAll(".dropdown")
+
+  dropdowns.forEach(dropdown => {
+    const select = dropdown.querySelector(".select")
+    const caret = dropdown.querySelector(".caret")
+    const menu = dropdown.querySelector(".dropdown-menu")
+    const options = dropdown.querySelectorAll(".dropdown-menu li")
+    const selected = dropdown.querySelector(".selected")
+
+    select.addEventListener('click', () => {
+        select.classList.toggle('select-clicked')
+        caret.classList.toggle('caret-rotate')
+        menu.classList.toggle('dropdown-menu-open')
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                selected.innerText = option.innerText
+                select.classList.remove("select-clicked")
+                caret.classList.remove("caret-rotate")
+                menu.classList.remove("dropdown-menu-open")
+                options.forEach(option => {
+                    option.classList.remove('dropdownActive')
+                })
+                option.classList.add("dropdownActive")
+            })
+        })
+    })
+  })
