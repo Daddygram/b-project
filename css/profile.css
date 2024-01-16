@@ -365,6 +365,11 @@ body {
     border-radius: 50%;
     background-color: white;
 }
+.category-circle svg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
 .category-text {
     width: fit-content;
     margin: auto;
