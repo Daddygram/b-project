@@ -15,12 +15,16 @@
         <div class="flexBetween">
             <div class="flexCenter">
                 <span class="logo flexCenter border">Logo</span>
-                <div class="flexCenter navMenu-items">
+                <div class="flexCenter navMenu-items relative">
                     <a href="/home.html">
                         <svg width="52px" height="52px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3103 1.77586C11.6966 1.40805 12.3034 1.40805 12.6897 1.77586L20.6897 9.39491L23.1897 11.7759C23.5896 12.1567 23.605 12.7897 23.2241 13.1897C22.8433 13.5896 22.2103 13.605 21.8103 13.2241L21 12.4524V20C21 21.1046 20.1046 22 19 22H14H10H5C3.89543 22 3 21.1046 3 20V12.4524L2.18966 13.2241C1.78972 13.605 1.15675 13.5896 0.775862 13.1897C0.394976 12.7897 0.410414 12.1567 0.810345 11.7759L3.31034 9.39491L11.3103 1.77586ZM5 10.5476V20H9V15C9 13.3431 10.3431 12 12 12C13.6569 12 15 13.3431 15 15V20H19V10.5476L12 3.88095L5 10.5476ZM13 20V15C13 14.4477 12.5523 14 12 14C11.4477 14 11 14.4477 11 15V20H13Z" fill="#000000"></path> </g></svg>
                     </a>
-                    <p>menu .</p>
-                    <p>submenu</p>
+                    <a href="#" class="nav-menu">menu &#x25BE;</a>
+                    <ul class="nav-dropdown absolute">
+                        <li class="border">submenu</li>
+                        <li class="border">submenu</li>
+                        <li class="border">submenu</li>
+                    </ul>
                 </div>
             </div>
             <div class="hamburger">
@@ -40,7 +44,7 @@
     </nav>
 
     <!-- PROFILE -->
-    <header>
+    <header class="profileHeader">
         <div class="pfp-container flexCenter">
             <div class="pfp-circle">
                 <div class="circle border relative flexCenter">
@@ -120,7 +124,7 @@
     </header>
 
     <!-- PROFILE POSTS (mainly javascript) -->
-    <main>
+    <main class="profileMain">
         <div class="profilePosts-container flexCenter">
             
         </div>
@@ -129,7 +133,7 @@
         <div class="profile-carousel relative" data-carousel>
             <button class="profileCarousel-button prev absolute" data-profileCarousel-buttons="prev">&xlarr;</button>
             <button class="profileCarousel-button next absolute" data-profileCarousel-buttons="next">&xrarr;</button>
-            <ul data-slides>
+            <ul data-slides class="ul-slides">
                 <li class="carousel-slide " data-active>
                     <div class="carouselPost border">
                         <div class="carouselPost-pic flexCenter">
@@ -221,23 +225,23 @@
                 <div>
                     <h3 class="category-text">text</h3>
                     <div class="categories1 flexCenter">
-                        <div class="category-circle"></div>
-                        <div class="category-circle"></div>
-                        <div class="category-circle"></div>
-                        <div class="category-circle"></div>
-                        <div class="category-circle"></div>
+                        <div class="category-circle1 category-circle"></div>
+                        <div class="category-circle2 category-circle"></div>
+                        <div class="category-circle3 category-circle"></div>
+                        <div class="category-circle4 category-circle"></div>
+                        <div class="category-circle5 category-circle"></div>
                     </div>
                 </div>
                 <div>
                     <h3 class="category-text">text</h3>
                     <div class="categories2 flexCenter">
-                        <div class="category-circle"></div>
-                        <div class="category-circle"></div>
-                        <div class="category-circle"></div>
-                        <div class="category-circle"></div>
-                        <div class="category-circle"></div>
-                        <div class="category-circle"></div>
-                        <div class="category-circle"></div>
+                        <div class="category-circle6 category-circle"></div>
+                        <div class="category-circle7 category-circle"></div>
+                        <div class="category-circle8 category-circle"></div>
+                        <div class="category-circle9 category-circle"></div>
+                        <div class="category-circle10 category-circle"></div>
+                        <div class="category-circle11 category-circle"></div>
+                        <div class="category-circle12 category-circle"></div>
                     </div>
                 </div>
                 <div>
