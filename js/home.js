@@ -1,47 +1,45 @@
-let slideIndex = 0;
-const slideWidth = document.querySelector('.card-body').offsetWidth + 5;
-const container = document.querySelector('.AllSlides');
-const slides = document.querySelectorAll('.card-body');
+// card sliders
+function setupSlider(containerSelector, prevBtnSelector, nextBtnSelector) {
+  const container = document.querySelector(containerSelector)
+  const slides = Array.from(container.children)
+  const prevBtn = document.querySelector(prevBtnSelector)
+  const nextBtn = document.querySelector(nextBtnSelector)
 
-function showSlides() {
-  const target = slideIndex * slideWidth;
-  slowScroll(container, target, 1000);
-}
+  let currentIndex = 0
 
-function slowScroll(element, target, duration) {
-  const start = element.scrollLeft;
-  const startTime = performance.now();
+  slides.forEach((slide, index) => {
+    slide.style.order = index
+  })
 
-  function animate(time) {
-    const elapsed = time - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-    element.scrollLeft = start + (target - start) * easeOutQuad(progress);
-
-    if (progress < 1) {
-      requestAnimationFrame(animate);
-    }
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length
+    updateSlides()
   }
 
-  requestAnimationFrame(animate);
-}
-
-function easeOutQuad(t) {
-  return t * (2 - t);
-}
-
-function nextSlide() {
-  if (slideIndex < slides.length - 1) {
-    slideIndex++;
-    showSlides();
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length
+    updateSlides()
   }
-}
 
-function prevSlide() {
-  if (slideIndex > 0) {
-    slideIndex--;
-    showSlides();
+  function updateSlides() {
+    slides.forEach((slide) => {
+      slide.style.order = currentIndex
+    })
+    container.scrollTo({
+      left: currentIndex * slides[0].offsetWidth,
+      behavior: 'smooth'
+    })
   }
+
+  prevBtn.addEventListener('click', prevSlide)
+  nextBtn.addEventListener('click', nextSlide)
+
+  // Initial update of the slides
+  updateSlides()
 }
 
-// Show the slides when the page loads
-showSlides();
+// Set up sliders
+setupSlider('.AllSlides', '#prevBtn1', '#nextBtn1')
+setupSlider('#AllSlides2', '#prevBtn2', '#nextBtn2')
+setupSlider('#AllSlides3', '#prevBtn3', '#nextBtn3')
+setupSlider('#AllSlides4', '#prevBtn4', '#nextBtn4')
