@@ -272,6 +272,9 @@ body {
 .acceptPost-content{
     gap: 10px;
 }
+.myPost-content{
+    gap: 10px;
+}
 .profileCircle {
     width: 70px;
     height: 70px;
@@ -317,6 +320,16 @@ body {
 }
 .delete-acceptPost:hover {
     color: red;
+}
+.myPost-svgs {
+    top: 10px;
+    right: 20px;
+    gap: 10px;
+}
+.myPost-circle {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
 }
 
 /* add post */
@@ -573,10 +586,22 @@ body {
     .profileCarousel-button.prev {
         left: 10px;
     }
+    .profileCircle {
+        width: 50px;
+        height: 50px;
+    }
+    .profileCircle svg {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
  }
 
  @media screen and (max-width: 480px) {
     .navMenu-items {
         display: none;
+    }
+    .myPost-content {
+        margin-top: 30px;
     }
  }
