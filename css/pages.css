@@ -2,6 +2,201 @@
   max-width: 100%;
   font-size: 40px,8vw,105px;
 }
+* Variables */
+
+.flexCenterr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flexAround {
+  display: flex;
+  justify-content: space-around;
+}
+.flexBetween {
+  display: flex;
+  justify-content: space-between;
+}
+.border {
+  border: 1px solid black;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.hidden {
+  display: none;
+}
+.pointer {
+  cursor: pointer;
+}
+.w-full {
+  width: 100%;
+}
+
+/* Navbar */
+.navbarr {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 999;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100px;
+  align-items: center;
+}
+.logo-hause {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navMenu-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  gap: 20px;
+  position: relative;
+}
+.nav-dropdown {
+  max-width: unset;
+  padding: 0;
+  width: fit-content;
+  top: 3rem;
+  left: 3.5rem;
+  background-color: white;
+  display: none;
+}
+.nav-dropdown li {
+  padding: 10px;
+  list-style: none;
+}
+.nav-menu {
+  display: block;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+.navMenu-items:hover .nav-dropdown {
+  display: block;
+}
+.nav-dropdown:hover {
+  display: block;
+}
+.navPage2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  left: 320px;
+  color: blue;
+  transform: translateY(-50%);
+}
+
+/* Hamburger */
+.hamburger {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  z-index: 2;
+}
+.burger {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: black;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 5px;
+}
+/* hamburger sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  min-height: 100vh;
+  position: fixed;
+  top: 101px;
+  right: -110%;
+  z-index: 2;
+  background-color: white;
+  transition: 0.4s ease;
+}
+.sidebar.hamActive {
+  right: 0;
+}
+.hamburger-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+}
+.hamburger-links:hover {
+  color: #998181;
+}
 .dropdown {
   display: flex;
   justify-content: center;
@@ -20,6 +215,9 @@
   padding-left: 3% !important;
   display: flex;
   justify-content: space-between;
+}
+.main-containr {
+  margin-top: 120px;
 }
 .select div {
   width: 60px;
@@ -110,6 +308,36 @@
   justify-content: center;
   align-items: center;
   font-size: 2rem;
+}
+@media screen and (max-width: 1024px) {
+  /* make navbar jump to bottom */
+  .navbarr {
+      top: auto;
+      bottom: 0;
+  }
+  .main-containr {
+      margin-top: 20px;
+  }
+  .sidebar {
+      top: auto;
+      bottom: 101px;
+      justify-content: flex-end;
+  }
+  .footer {
+      margin-bottom: 100px;
+  }
+  .nav-dropdown {
+      top: auto;
+      bottom: 3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .navMenu-items {
+    display: none;
+  }
+  .navPage2 {
+    display: none;
+  }
 }
 @media (max-width: 500px) {
   .select div {

@@ -13,72 +13,40 @@
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/pages/profile.html">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-                >Disabled</a
-              >
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
+    <nav class="navbarr border fixed">
+      <div class="flexBetween">
+          <div class="flexCenter">
+              <span class="logo flexCenter border">Logo</span>
+              <div class="flexCenter navMenu-items relative">
+                  <a href="/home.html">
+                      <svg width="52px" height="52px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3103 1.77586C11.6966 1.40805 12.3034 1.40805 12.6897 1.77586L20.6897 9.39491L23.1897 11.7759C23.5896 12.1567 23.605 12.7897 23.2241 13.1897C22.8433 13.5896 22.2103 13.605 21.8103 13.2241L21 12.4524V20C21 21.1046 20.1046 22 19 22H14H10H5C3.89543 22 3 21.1046 3 20V12.4524L2.18966 13.2241C1.78972 13.605 1.15675 13.5896 0.775862 13.1897C0.394976 12.7897 0.410414 12.1567 0.810345 11.7759L3.31034 9.39491L11.3103 1.77586ZM5 10.5476V20H9V15C9 13.3431 10.3431 12 12 12C13.6569 12 15 13.3431 15 15V20H19V10.5476L12 3.88095L5 10.5476ZM13 20V15C13 14.4477 12.5523 14 12 14C11.4477 14 11 14.4477 11 15V20H13Z" fill="#000000"></path> </g></svg>
+                  </a>
+                  <a href="#" class="nav-menu">menu &#x25BE;</a>
+                  <ul class="nav-dropdown absolute">
+                      <li class="border">submenu</li>
+                      <li class="border">submenu</li>
+                      <li class="border">submenu</li>
+                  </ul>
+              </div>
+          </div>
+          <div class="signup">
+            <button type="submit" class="btn btn-primary signUpBtn absolute">Sign Up</button>
+          </div>
+          <div class="hamburger">
+              <label class="burger" for="burger">
+                  <input type="checkbox" id="burger">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </label>
+              <aside class="sidebar border">
+                  <a href="/home.html" class="hamburger-links flexCenter regular14">Home</a>
+                  <a href="/pages.html" class="hamburger-links flexCenter regular14">Gallery</a>
+                  <a href="/pages/profile.html" class="hamburger-links flexCenter regular14">Profile</a>
+              </aside>
+          </div>
       </div>
-    </nav>
+  </nav>
 
     <!---------------------------------slider------------------------------------->
     <div
@@ -569,8 +537,9 @@
       <button class="scroll-btn" id="nextBtn4">❯</button>
     </div>
 
-    <div class="footer"></div>
+    <div class="footer">footer</div>
 
+    <script src="/js/hamburger.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
