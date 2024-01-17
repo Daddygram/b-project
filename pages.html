@@ -525,8 +525,8 @@
     </div>
 
     <div class="card-flex container">
-      <button class="scroll-btn" id="prevBtn" onclick="prevSlide()">❮</button>
-      <div class="AllSlides">
+      <button class="scroll-btn" id="prevBtn5">❮</button>
+      <div class="AllSlides" id="AllSlides5">
         <!--1-->
         <div class="card-bodyy">
           <img src="images/green.jpg" alt="" />
@@ -600,10 +600,10 @@
           </div>
         </div>
       </div>
-      <button class="scroll-btn" id="nextBtn" onclick="nextSlide()">❯</button>
+      <button class="scroll-btn" id="nextBtn5">❯</button>
     </div>
 
-    <div class="footer"></div>
+    <div class="footer">footer</div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -611,5 +611,9 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/home.js"></script>
+    <script>
+      // Set up slider
+      setupSlider("#AllSlides5", "#prevBtn5", "#nextBtn5")
+    </script>
   </body>
 </html>

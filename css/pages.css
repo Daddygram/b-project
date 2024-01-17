@@ -69,6 +69,11 @@
   border: 1px solid rgba(0, 0, 0, 0.682);
   width: 393px;
   scroll-snap-align: start;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.card-body:hover {
+  transform: scale(1.05);
 }
 .card-bodyy {
   margin: 5px;
@@ -101,6 +106,10 @@
   width: 100%;
   margin-top: 70px;
   height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
 }
 @media (max-width: 500px) {
   .select div {
