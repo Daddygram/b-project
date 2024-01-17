@@ -44,6 +44,15 @@ profileCarouselButtons.forEach(button => {
     })
 })
 
+// profile carousel heart 
+const hearts = document.querySelectorAll(".profileCarousel-heart")
+
+hearts.forEach(heart => {
+    heart.addEventListener("click", () => {
+        heart.classList.toggle("clicked")
+    })
+})
+
 // Adding pictures 
 let pfp = document.querySelector(".pfp")
 let inputpfp = document.getElementById("input-pfp")
