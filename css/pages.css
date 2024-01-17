@@ -70,6 +70,14 @@
   width: 393px;
   scroll-snap-align: start;
 }
+.card-bodyy {
+  margin: 5px;
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.682);
+  min-width: 393px;
+  scroll-snap-align: start;
+}
 .card-body img {
   max-width: 100%;
   border-radius: 4px;
@@ -93,4 +101,13 @@
   width: 100%;
   margin-top: 70px;
   height: 400px;
+}
+@media (max-width: 500px) {
+  .select div {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+  
 }
