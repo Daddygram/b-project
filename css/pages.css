@@ -1,3 +1,7 @@
+*{
+  max-width: 100%;
+  font-size: 40px,8vw,105px;
+}
 .dropdown {
   display: flex;
   justify-content: center;
@@ -54,12 +58,16 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
+.col-md-4{
+  display: flex;
+  justify-content: center;
+}
 .card-body {
   margin: 5px;
   position: relative;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.682);
-  min-width: 393px;
+  width: 393px;
   scroll-snap-align: start;
 }
 .card-body img {
