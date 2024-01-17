@@ -1,69 +1,88 @@
-
-.cardd{
-    width: 100%;
-    height: 200px;
-    background-color: green;
+.dropdown {
+  display: flex;
+  justify-content: center;
+}
+.dropdown a {
+  width: 88%;
+  margin: 10px;
+}
+.cardd {
+  width: 100%;
+  height: 200px;
+  background-color: green;
+}
+.select {
+  padding-right: 4% !important;
+  padding-left: 3% !important;
+  display: flex;
+  justify-content: space-between;
+}
+.select div {
+  width: 60px;
+  height: 60px;
+  border: 1px solid black;
+  border-radius: 30px;
 }
 
-.like{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
+.like {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
 }
-.card-flex{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.card-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.scroll-btn{
-    border-radius: 30px;
-    background-color: black;
-    color: white;
-    padding: 5px 13px;
-    margin: 5px;
+.scroll-btn {
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+  padding: 5px 13px;
+  margin: 5px;
 }
-.AllSlides{
-    display: flex;
-    overflow-y:hidden;
-    overflow-x:hidden;
-    scroll-snap-type: x mandatory;
+.AllSlides {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
 }
-.center{
-    text-align: center;
-    width: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
+.center {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
-.card-body{
-    margin: 5px;
-    position: relative;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.682);
-    min-width: 393px;
-    scroll-snap-align: start;
+.card-body {
+  margin: 5px;
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.682);
+  min-width: 393px;
+  scroll-snap-align: start;
 }
 .card-body img {
-    max-width: 100%;
-    border-radius: 4px;
+  max-width: 100%;
+  border-radius: 4px;
 }
-.card-details{
-    padding: 15px;
+.card-details {
+  padding: 15px;
 }
-.card-details div{
-    display: flex;
-    justify-content: space-between;
+.card-details div {
+  display: flex;
+  justify-content: space-between;
 }
 /*-----------------------------------------------*/
-.baner{
-    background-color: rgb(145, 112, 112);
-    width: 100%;
-    margin: 70px 0px;
-    height: 400px;
+.baner {
+  background-color: rgb(145, 112, 112);
+  width: 100%;
+  margin: 70px 0px;
+  height: 400px;
 }
-.footer{
-    background-color: rgb(76, 76, 76);
-    width: 100%;
-    margin-top: 70px;
-    height: 400px;
+.footer {
+  background-color: rgb(76, 76, 76);
+  width: 100%;
+  margin-top: 70px;
+  height: 400px;
 }
