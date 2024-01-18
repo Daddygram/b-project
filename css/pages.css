@@ -292,6 +292,9 @@
   display: flex;
   justify-content: space-between;
 }
+.clicked {
+  fill: red;
+}
 /*-----------------------------------------------*/
 .baner {
   background-color: rgb(145, 112, 112);
